@@ -17,9 +17,9 @@ public class loginSteps extends Parammeter{
 
     private By button = By.linkText("Log in");
     private By fieldName = By.name("session[username_or_email]");
-    private String email = "dannyo_sama@yahoo.co.id";
+    private String email = "";
     private By fieldPass = By.name("session[password]");
-    private String pass = "twitt3r";
+    private String pass = "";
     private By checkbox = By.name("remember_me");
     private By click = By.xpath("//div[@class='LoginDialog-form']/form/input[1]");
 
