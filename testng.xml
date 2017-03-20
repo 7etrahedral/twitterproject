@@ -3,7 +3,7 @@
     <!--When it want has <Class> on annotation SettingUp class-->
     <test name="Twitter Test" preserve-order="true">
         <classes>
-            <class name="testcasses.logIn" />
+            <class name="TestCasses.TestLoginLogout" />
         </classes>
     </test>
 
