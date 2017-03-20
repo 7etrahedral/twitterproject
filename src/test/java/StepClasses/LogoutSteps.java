@@ -1,6 +1,6 @@
 package StepClasses;
 
-import CommonClasses.Parameter;
+import Utilities.Parameter;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 

@@ -1,6 +1,7 @@
 package StepClasses;
 
-import CommonClasses.Parameter;
+import Utilities.Parameter;
+import Utilities.getEnv;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import ru.yandex.qatools.allure.annotations.Step;
@@ -15,15 +16,13 @@ public class LoginSteps extends Parameter {
         super(driver);
     }
 
+    private getEnv getenv;
     private By homeLoginButton = By.linkText("Log in");
     private By fieldName = By.name("session[username_or_email]");
-    private String email = "";
     private By fieldPass = By.name("session[password]");
-    private String pass = "";
     private By checkBox = By.name("remember_me");
     private By loginButton = By.xpath("//div[@class='LoginDialog-form']/form/input[1]");
     private By tweetTextBox = By.xpath(".//*[@id='tweet-box-home-timeline']");
-
 
     @Step("click Home Login Button")
     public void clickHomeLoginButton() {
@@ -32,12 +31,14 @@ public class LoginSteps extends Parameter {
 
     @Step("fill Name")
     public void inputUsername() {
-        userSendText(fieldName, email);
+        getenv = new getEnv();
+        userSendText(fieldName, getenv.getUsername());
     }
 
     @Step("fill Pass")
     public void inputPasswd() {
-        userSendText(fieldPass, pass);
+        getenv = new getEnv();
+        userSendText(fieldPass, getenv.getPassword());
     }
 
     @Step("unchecked box")

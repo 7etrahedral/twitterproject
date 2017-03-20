@@ -1,6 +1,6 @@
 package TestCasses;
 
-import CommonClasses.SettingUp;
+import Utilities.SettingUp;
 import StepClasses.LoginSteps;
 import StepClasses.LogoutSteps;
 import org.testng.annotations.Test;
